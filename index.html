@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://xcitedb.net; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Assessment report · דוח הערכה</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="report.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1 lang="en">Your assessment report</h1>
+      <h1 lang="he" dir="rtl">דוח ההערכה שלך</h1>
+    </header>
+
+    <section id="loading" class="state">
+      <p lang="en">Preparing your report…</p>
+      <p lang="he" dir="rtl">מכינים את הדוח…</p>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress"></span></div>
+    </section>
+
+    <section id="ready" class="state" hidden>
+      <p class="actions">
+        <a id="open" class="button" target="_blank" rel="noopener"><span lang="en">Open the report</span> · <span lang="he">פתיחת הדוח</span></a>
+        <a id="save" class="button secondary"><span lang="en">Save the file</span> · <span lang="he">שמירת הקובץ</span></a>
+      </p>
+      <p lang="en" id="until-en"></p>
+      <p lang="he" dir="rtl" id="until-he"></p>
+    </section>
+
+    <section id="expired" class="state" hidden>
+      <p lang="en">This link has expired, or the report is no longer available. Please contact the clinic.</p>
+      <p lang="he" dir="rtl">תוקף הקישור פג, או שהדוח כבר אינו זמין. נא לפנות למרפאה.</p>
+    </section>
+
+    <section id="broken" class="state" hidden>
+      <p lang="en">This link is incomplete. Please open it again from the email.</p>
+      <p lang="he" dir="rtl">הקישור אינו שלם. נא לפתוח אותו שוב מתוך הדוא״ל.</p>
+    </section>
+
+    <section id="failed" class="state" hidden>
+      <p lang="en">The report could not be downloaded. Check your connection and try again.</p>
+      <p lang="he" dir="rtl">לא ניתן היה להוריד את הדוח. בדקו את החיבור ונסו שוב.</p>
+      <p class="actions"><button id="retry" class="button" type="button"><span lang="en">Try again</span> · <span lang="he">ניסיון חוזר</span></button></p>
+    </section>
+
+    <footer>
+      <p lang="en">This report is a screening summary and is not a medical diagnosis. Please discuss it with your clinician.</p>
+      <p lang="he" dir="rtl">הדוח הוא סיכום סקירה ואינו אבחנה רפואית. מומלץ לשוחח עליו עם הרופא/ה המטפל/ת.</p>
+    </footer>
+  </main>
+</body>
+</html>
